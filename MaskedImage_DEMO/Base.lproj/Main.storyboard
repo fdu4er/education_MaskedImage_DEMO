@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MaskedImage_DEMO" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="gXM-wb-aFv" customClass="ImgViewWithMask" customModule="MaskedImage_DEMO" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="184" width="375" height="299"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="299" id="Jta-iP-HVO"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="maskImage" value="maskImage"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hsw-s9-HtR">
+                                <rect key="frame" x="317.5" y="213.5" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="gXM-wb-aFv" firstAttribute="top" secondItem="Hsw-s9-HtR" secondAttribute="bottom" constant="-50" id="6I0-I3-GRq"/>
+                            <constraint firstItem="gXM-wb-aFv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BbB-tb-TrW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hsw-s9-HtR" secondAttribute="trailing" constant="16" id="Qyj-wr-gfs"/>
+                            <constraint firstItem="gXM-wb-aFv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="t83-JO-rPe"/>
+                            <constraint firstItem="gXM-wb-aFv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vTu-jI-jkm"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-197.59999999999999" y="92.203898050974516"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="gXM-wb-aFv">
+            <size key="intrinsicContentSize" width="629" height="857"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="image" width="629" height="857"/>
+        <image name="maskImage" width="563" height="306"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
